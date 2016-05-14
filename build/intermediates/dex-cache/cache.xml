@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_4dea92b6da4c2467496fc818b9cb3fba9d167274.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/benear-sdk/core/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7bb8fb21070aebb8d796667c4ca27dc35ca2425c">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/benear-sdk-core-unspecified_fa6695489bca8c23cefc6b27ca046701c63fce0c.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_7716ba1c2b8f21099940fbcb074814f8b2bc0da9.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/com.android.support-design-23.3.0_af5de4c5b53295aa61d29601b07660cc8949de09.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/benear-sdk/model/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="abbbe19bf3d778fd57abd3ceb29c847bd37aebf8">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/benear-sdk-model-unspecified_60bf95cd6e59a74a3d67469cc0fe975164e8511e.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_542205fc91d26a2c956987cdaa84bb4bd081b5d6.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.3.0_859ce44750e9fa2ab3d2b77725df3548ff74cad2.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_c499dff4a5e87dfc3994f208f1ffa2321f5654d0.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/retrofit-2.0.2_d1c8c9a7b322aac04e78554788e46aeea0dde6ea.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/converter-gson-2.0.2_928ad9d7be175c6317fc76d604092ce848b73b97.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/okhttp-3.2.0_0bdc992df52a833e728710a9e7cf43a4d2b99af1.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/okio-1.6.0_8da1f4eb78bc434200ca1f05054693e7b1ef5c0b.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_8bc04cc2e7f81ad396c933c85a21d1524a80c5fd.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_bdf88810cea92e6ed42074641908433266646b71.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/gson-2.6.1_3560c9a3ea1437ebfb098f87c50425d99d6dad7b.jar" />
+    </item>
+    <item
+        jar="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/exploded-aar/benear-sdk/benearqr/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="435c1a461e123242a9b9e51c288cb1b7dabfaf7c">
+        <dex dex="/Users/mreverter/AndroidStudioProjects/wamel/benear-sdk/examples/build/intermediates/pre-dexed/debug/benear-sdk-benearqr-unspecified_4a9da4c8cf1869f92d2729cdf28048ba9c849378.jar" />
+    </item>
+
+</items>
