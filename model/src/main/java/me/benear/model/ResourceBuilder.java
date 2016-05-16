@@ -14,7 +14,7 @@ public class ResourceBuilder {
     }
 
     public static <T> List<T> getCustomizedResources(Class<T> tClass, List<BeResource> resourcesOfType) {
-        List<T> list = new ArrayList<T>();
+        List<T> list = new ArrayList<>();
         for(BeResource resource : resourcesOfType) {
             list.add(ResourceBuilder.getCustomizedResource(tClass, resource));
         }
