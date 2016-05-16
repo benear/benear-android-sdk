@@ -8,8 +8,7 @@ import me.benear.core.services.ResourceService;
 import me.benear.model.BeResource;
 import me.benear.model.BeTag;
 import me.benear.model.BenearProvider;
-import me.benear.model.BenearClient;
-import me.benear.model.RequestCallback;
+import me.benear.model.OnResponseCallback;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,7 +29,7 @@ public class BenearAPI implements BenearProvider {
     }
 
     @Override
-    public void requestResource(BeTag tag, Set<String> types, final RequestCallback<List<BeResource>> callback) {
+    public void requestResource(BeTag tag, Set<String> types, final OnResponseCallback<List<BeResource>> callback) {
         ResourceService service = mRetrofit.create(ResourceService.class);
 
         String typesQueryList = "";

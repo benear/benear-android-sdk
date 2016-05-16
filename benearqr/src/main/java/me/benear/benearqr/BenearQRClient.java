@@ -10,19 +10,22 @@ import me.benear.model.BeTag;
 import me.benear.model.BenearClient;
 import me.benear.model.BenearProvider;
 import me.benear.model.OnDetectionCallback;
-import me.benear.model.RequestCallback;
+import me.benear.model.OnResponseCallback;
+import me.benear.model.ResourceBuilder;
 
 /**
  * Created by mreverter on 14/5/16.
  */
 public class BenearQRClient implements BenearClient {
 
-    private Map<String, OnDetectionCallback> mCallbacksForTypes;
+    private Map<String, OnDetectionCallback> mTypeOnDetectionCallbacksMap;
+    private Map<String, Class> mTypeClassMap;
     private BenearProvider mBenearProvider;
     private Boolean mConnected;
 
     public BenearQRClient(BenearQRBuilder benearQRBuilder) {
-        mCallbacksForTypes = benearQRBuilder.mCallbacksForTypes;
+        mTypeOnDetectionCallbacksMap = benearQRBuilder.mTypeOnDetectionCallbackMap;
+        mTypeClassMap = benearQRBuilder.mTypeClassMap;
     }
 
     @Override
@@ -37,22 +40,33 @@ public class BenearQRClient implements BenearClient {
 
     public void onResourcesDetected(List<BeResource> resources) {
         if(mConnected) {
-            Map<String, List<BeResource>> foundResources = new HashMap<>();
 
-            for (BeResource resource : resources) {
+            Map<String, List<BeResource>> typeResourcesMap = getTypeResourcesMap(resources);
 
-                if (foundResources.get(resource.getType()) == null) {
-                    foundResources.put(resource.getType(), new ArrayList<BeResource>());
-                }
-                foundResources.get(resource.getType()).add(resource);
-            }
+            for (String type : typeResourcesMap.keySet()) {
 
-            for (String type : foundResources.keySet()) {
-                if (mCallbacksForTypes.containsKey(type)) {
-                    mCallbacksForTypes.get(type).onDetected(foundResources.get(type));
-                }
+                List<BeResource> resourcesOfType = typeResourcesMap.get(type);
+
+                Class typeClass = mTypeClassMap.get(type);
+
+                List list = ResourceBuilder.getCustomizedResources(typeClass, resourcesOfType);
+
+                mTypeOnDetectionCallbacksMap.get(type).onDetected(list);
             }
         }
+    }
+
+    private Map<String, List<BeResource>> getTypeResourcesMap(List<BeResource> resources) {
+
+        HashMap<String, List<BeResource>> resourcesForTypeMap = new HashMap<>();
+
+        for (BeResource resource : resources) {
+            if (resourcesForTypeMap.get(resource.getType()) == null) {
+                resourcesForTypeMap.put(resource.getType(), new ArrayList<BeResource>());
+            }
+            resourcesForTypeMap.get(resource.getType()).add(resource);
+        }
+        return resourcesForTypeMap;
     }
 
     public void scanQR() {
@@ -61,7 +75,7 @@ public class BenearQRClient implements BenearClient {
         tag.setId("1");
 
         this.mConnected = true;
-        RequestCallback<List<BeResource>> callback = new RequestCallback<List<BeResource>>() {
+        OnResponseCallback<List<BeResource>> onResponseCallback = new OnResponseCallback<List<BeResource>>() {
             @Override
             public void onSuccess(List<BeResource> response) {
                 onResourcesDetected(response);
@@ -73,19 +87,22 @@ public class BenearQRClient implements BenearClient {
             }
         };
 
-        mBenearProvider.requestResource(tag, mCallbacksForTypes.keySet(), callback);
+        mBenearProvider.requestResource(tag, this.mTypeClassMap.keySet(), onResponseCallback);
     }
 
     public static class BenearQRBuilder {
 
-        private Map<String, OnDetectionCallback> mCallbacksForTypes;
+        private Map<String, OnDetectionCallback> mTypeOnDetectionCallbackMap;
+        private Map<String, Class> mTypeClassMap;
 
         public BenearQRBuilder() {
-            mCallbacksForTypes = new HashMap<>();
+            mTypeClassMap = new HashMap<>();
+            mTypeOnDetectionCallbackMap = new HashMap<>();
         }
 
-        public BenearQRBuilder addOnDetectionCallbackForType(String type, OnDetectionCallback onDetectionCallback) {
-            mCallbacksForTypes.put(type, onDetectionCallback);
+        public <T> BenearQRBuilder addOnDetectionCallbackForType(Class tClass, OnDetectionCallback<T> onDetectionCallback) {
+            mTypeOnDetectionCallbackMap.put(tClass.getSimpleName(), onDetectionCallback);
+            mTypeClassMap.put(tClass.getSimpleName(), tClass);
             return this;
         }
 

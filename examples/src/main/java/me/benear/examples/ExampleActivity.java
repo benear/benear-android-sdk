@@ -10,7 +10,7 @@ import java.util.List;
 
 import me.benear.benearqr.BenearQRClient;
 import me.benear.core.BenearAPI;
-import me.benear.model.BeResource;
+import me.benear.examples.model.Mesa;
 import me.benear.model.OnDetectionCallback;
 
 public class ExampleActivity extends AppCompatActivity {
@@ -24,24 +24,19 @@ public class ExampleActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Create benearAPI
         BenearAPI benearAPI = new BenearAPI.BenearBuilder()
-                //.enableOffLine()
                 //.anotherConfigs
                 .build();
 
-        //Create clients
         mQRClient = new BenearQRClient.BenearQRBuilder()
-                .addOnDetectionCallbackForType("mesa", new OnDetectionCallback() {
+                .addOnDetectionCallbackForType(Mesa.class, new OnDetectionCallback<Mesa>() {
                     @Override
-                    public void onDetected(List<BeResource> resources) {
+                    public void onDetected(List<Mesa> resources) {
                         show(String.valueOf(resources.size()));
                     }
                 })
                 .build();
 
-
-        //add clients
         mQRClient.setBenearProvider(benearAPI);
     }
 
