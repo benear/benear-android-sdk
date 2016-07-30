@@ -1,0 +1,6 @@
+ratings:
+   paths:
+   - "model/**/*"
+   - "core/**/*"
+   - "benearqr/**/*"
+   - "**.java"
